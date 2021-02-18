@@ -29,4 +29,6 @@ with open(filename, 'a') as f:
     var = funct()
     json.dump(var, f)
 
+print(len(results))
+
 
