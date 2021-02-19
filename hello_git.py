@@ -6,8 +6,9 @@ print("Hello Git world!")
 
 results = [
 ]
-def funct(list = ['a', 'b', 'c'], list2 = ['x', 'y', 'z']):
 
+def funct(list = ['a', 'b', 'c'], list2 = ['x', 'y', 'z']):
+    score = 0
     for n in list:
         print(f"\nThis is letter {n}. ")
 
@@ -16,6 +17,12 @@ def funct(list = ['a', 'b', 'c'], list2 = ['x', 'y', 'z']):
             text = f"{m} and {n};"
 
             results.append(text)
+            if text == 'x and a':
+
+                filename = 'special.json'
+                with open(filename, 'w') as f1:
+                    score += 1
+                    json.dump(score, f1)
 
     return results
 
@@ -30,5 +37,7 @@ with open(filename, 'a') as f:
     json.dump(var, f)
 
 print(len(results))
+
+
 
 
