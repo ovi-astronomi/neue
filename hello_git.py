@@ -18,7 +18,6 @@ def funct(list = ['a', 'b', 'c'], list2 = ['x', 'y', 'z']):
 
             results.append(text)
             if text == 'x and a':
-
                 filename = 'special.json'
                 with open(filename, 'w') as f1:
                     score += 1
