@@ -6,7 +6,7 @@ print("Hello Git world!")
 
 results = [
 ]
-
+filename1 = 'special.json'
 def funct(list = ['a', 'b', 'c'], list2 = ['x', 'y', 'z']):
     score = 0
     for n in list:
@@ -18,8 +18,8 @@ def funct(list = ['a', 'b', 'c'], list2 = ['x', 'y', 'z']):
 
             results.append(text)
             if text == 'x and a':
-                filename = 'special.json'
-                with open(filename, 'w') as f1:
+
+                with open(filename1, 'w') as f1:
                     score += 1
                     json.dump(score, f1)
 
@@ -36,6 +36,8 @@ with open(filename, 'a') as f:
     json.dump(var, f)
 
 print(len(results))
+
+
 
 
 
